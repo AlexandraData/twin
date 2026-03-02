@@ -51,8 +51,3 @@ variable "root_domain" {
   type        = string
   default     = ""
 }
-
-variable "github_repository" {
-  description = "The owner and name of the GitHub repository"
-  type        = string
-}
