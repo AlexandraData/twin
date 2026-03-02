@@ -1,6 +1,9 @@
 terraform {
   backend "s3" {
-    # These values will be set by deployment scripts
-    # For local development, they can be passed via -backend-config
+    bucket         = "twin-terraform-state-078237422485" # Must match your actual S3 bucket
+    key            = "digital-twin/terraform.tfstate"         # The path/name of the state file
+    region         = "us-east-1"                             # Your AWS region
+    encrypt        = true
+    dynamodb_table = "terraform-state-lock"                  # Optional: If you set up state locking
   }
 }
