@@ -4,6 +4,5 @@ terraform {
     key            = "digital-twin/terraform.tfstate"         # The path/name of the state file
     region         = "eu-west-3"                             # Your AWS region
     encrypt        = true
-    dynamodb_table = "terraform-state-lock"                  # Optional: If you set up state locking
   }
 }
